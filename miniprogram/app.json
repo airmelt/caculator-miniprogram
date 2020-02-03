@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/percentage/percentage"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "伊夏宝宝专用计算器",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "四则运算",
+      "iconPath": "pages/images/home.png",
+      "selectedIconPath": "pages/images/home2.png"
+      },
+      {
+        "pagePath": "pages/percentage/percentage",
+        "text": "百分比",
+        "iconPath": "pages/images/Attention.png",
+        "selectedIconPath": "pages/images/Attention2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

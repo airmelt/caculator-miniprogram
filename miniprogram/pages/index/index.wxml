@@ -1,0 +1,50 @@
+<view class="container">
+  <view class='topView'>
+    <view class="topBtn">
+      <button type="{{mop == '+'?'primary':'default'}}" class="{{mop == '+'?'topItemSlt':'topItem'}} " bindtap="sltPlus">加</button>
+      <button type="{{mop == '-'?'primary':'default'}}" class="{{mop == '-'?'topItemSlt':'topItem'}} " bindtap="sltSubd">减</button>
+      <button type="{{mop == '×'?'primary':'default'}}" class="{{mop == '×'?'topItemSlt':'topItem'}}" bindtap="sltMult">乘</button>
+      <button type="{{mop == '÷'?'primary':'default'}}" class="{{mop == '÷'?'topItemSlt':'topItem'}} " bindtap="sltDivi">除</button>
+    </view>
+  </view>
+  <view class="mainView">
+    <text class="proShow">{{mproText}}</text>
+    <view class='ansView'>
+      <text class='ansTitle ansSide'></text>
+      <input class='userAns' disabled='true' placeholder="输入答案" bindinput="bindKeyInput" focus="{{inputFocus}}" type="number" bindconfirm="ansSubmit" bindfocus="focusInputEvent" placeholder-style='color:#eee;' value='{{inputValue}}' maxlength='3' bindblur='ansSubmit'
+        confirm-type="done" />
+      <text class="ansSide {{isRight==true?'isRightCls':'isWrongCls'}}">{{infoTxt}}</text>
+    </view>
+  </view>
+
+  <view class="btnView">
+
+    <!-- <text class="user-motto">{{motto}}</text>-->
+    <view class='numBtn'>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn1}}' bindtap="AnsInput">1</button>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn2}}' bindtap="AnsInput">2</button>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn3}}' bindtap="AnsInput">3</button>
+    </view>
+    <view class='numBtn'>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn4}}' bindtap="AnsInput">4</button>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn5}}' bindtap="AnsInput">5</button>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn6}}' bindtap="AnsInput">6</button>
+    </view>
+    <view class='numBtn'>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn7}}' bindtap="AnsInput">7</button>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn8}}' bindtap="AnsInput">8</button>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn9}}' bindtap="AnsInput">9</button>
+    </view>
+    <view class='numBtn'>
+      <button type='default' disabled='true' plain='true'>,.:</button>
+      <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn0}}' bindtap="AnsInput">0</button>
+      <button type='warn' disabled='{{inputEnable}}' plain='true' bindtap="AnsClear">删除</button>
+    </view>
+    <view>
+      <button disabled='{{proAuto}}' type='default' bindtap="showPro">{{inputEnable==true?'开始':'下一题'}}</button>
+      <button type='primary' bindtap="showAns" disabled='{{inputEnable}}'>答案</button>
+      <button type='default' bindtap="checkInput" disabled="{{inputEnable}}">确定</button>
+    </view>
+
+  </view>
+</view>
