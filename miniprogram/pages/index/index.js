@@ -46,6 +46,23 @@ Page({
     // })
   },
 
+  // 转发
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+    }
+    return {
+      path: '/pages/index/index',
+      imageUrl: '/pages/images/miniprogram.png',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
+
   sltPlus: function () {
     op = "+";
     this.setData({ mop: op });
