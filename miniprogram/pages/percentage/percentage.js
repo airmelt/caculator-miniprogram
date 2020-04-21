@@ -28,6 +28,7 @@ Page({
     infoTxt: '',
     inputEnable: true,
     inputValue: '',
+    modalHidden: true,
     btn0: '0',
     btn1: '1',
     btn2: '2',
@@ -153,6 +154,21 @@ Page({
         duration: 1000
       })
     }
+  },
+  modalConfirm() {
+    this.setData({
+      modalHidden: true
+    });
+  },
+  modalCancel() {
+    this.setData({
+      modalHidden: true
+    });
+  },
+  showModal() {
+    this.setData({
+      modalHidden: false
+    });
   },
 })
  
