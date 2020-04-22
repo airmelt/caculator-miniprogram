@@ -3,8 +3,15 @@
     <view class="topBtn">
       <button type="{{mop == '%'?'primary':'default'}}" class="{{mop == '%'?'topItemSlt':'topItem'}} " bindtap="sltPct">百分比</button>
       <button type="{{mop == '÷'?'primary':'default'}}" class="{{mop == '÷'?'topItemSlt':'topItem'}} " bindtap="sltDivi">分式</button>
+      <button type='default' class='topItem' bindtap="showModal">提示</button>
+      <modal title="百分比和分式相互转化的提示" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancel">
+        <view>
+          <image class="image" src="../images/百分比和分式.jpg"></image>
+        </view>
+      </modal>
     </view>
   </view>
+  
   <view class="mainView">
     <text class="proShow">{{mproText}}</text>
     <view class='ansView'>
@@ -16,16 +23,6 @@
   </view>
 
   <view class="btnView">
-
-    <!-- <text class="user-motto">{{motto}}</text>-->
-    <view class='hint'>
-      <button type='default' plain='true' bindtap="showModal">提示</button>
-      <modal title="百分比和分式相互转化的提示" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancel">
-        <view>
-          <image class="image" src="../images/百分比和分式.jpg"></image>
-        </view>
-      </modal>
-    </view>
     <view class='numBtn'>
       <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn1}}' bindtap="AnsInput">1</button>
       <button type='default' disabled='{{inputEnable}}' plain='true' id='{{btn2}}' bindtap="AnsInput">2</button>
@@ -51,6 +48,5 @@
       <button type='primary' bindtap="showAns" disabled='{{inputEnable}}'>答案</button>
       <button type='default' bindtap="checkInput" disabled="{{inputEnable}}">确定</button>
     </view>
-
   </view>
 </view>
